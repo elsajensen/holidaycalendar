@@ -1,0 +1,621 @@
+<html>
+<head>
+	<title>The Holiday Calendar</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style>
+		body {
+			max-width: 100%;
+			font-family: 'Source Sans Pro', sans-serif;
+		}
+
+		h1 {
+			font-size: 36px;
+			font-family: 'Source Sans Pro', sans-serif;
+			color: #ed542a;
+			font-weight: normal;
+			text-align: left;
+			margin-left: 5%;
+			margin-top: 5%;
+			letter-spacing: 2px;
+		}
+
+		h2 {
+			color: #ed542a;
+		}
+
+		h3 {
+			font-size: 16px;
+			font-family: 'Source Sans Pro', sans-serif;
+			color: black;
+			font-weight: normal;
+			text-align: left;
+			margin-left: 5%;
+			margin-top: 2%;
+			width: 50%;
+		}
+
+		#mySelect {
+			width: 22%;
+    		border: none;
+   		 	margin-left: 5%;
+   		 	float: left;
+   		 	margin-top: 2px;
+   		 	background-color: #f1f1f1;
+    		border: none;
+    		border-radius: 4px;
+    		padding: 8px 24px;
+    		margin: 15px 2px;
+    		cursor: pointer;
+		}
+
+
+		#myUL {
+    		width: 10%;
+    		padding: 16px 20px;
+    		border: none;
+    		border-radius: 4px;
+   		 	background-color: #f1f1f1;
+   		 	margin-right: 5%;
+   		 	list-style: none;
+   		 	float: right;
+   		 	margin-top: 5%;
+		}
+
+		#container1, #container2, #container3, #container4, #container5, #container6, #container7, #container8, #container9, #container10, #container11, #container12 {
+			font-size: 15px;
+			font-family: 'Source Sans Pro', sans-serif;
+			color: black;
+			width: 450px;
+			float: left;
+			text-align: left;
+			margin-left: 5%;
+		}
+
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+
+		form {
+			margin-left: 5%;
+		}
+
+		.month {
+			display:none;
+			margin-bottom: 10%;
+		}
+
+		#dots {
+			width: 20%;
+			margin-left: 5%;
+			margin-top: -1%;
+		}
+
+		#date {
+			font-family: 'Source Sans Pro', sans-serif;
+			font-size: 12px;
+			font-weight: normal;
+			position: absolute;
+			top: 50px;
+			right: 5%;
+		}
+
+		#txt {
+			font-family: 'Source Sans Pro', sans-serif;
+			font-size: 12px;
+			font-weight: normal;
+			position: absolute;
+			top: 70px;
+			right: 5%;
+		}
+
+	</style>
+
+</head>
+<body onload="startTime()">
+
+	<p id="date"></p>	
+	<p id="txt"></p>
+
+	<h1><strong>THE HOLIDAY CALENDAR</strong> 2017</h1>
+
+		<img src="dots.png" id="dots">
+
+	<h3>Introducing the calendar of all the fun, wacky and trivial holidays throughout the year. Find your favorite one by selecting a month in the menu below.</h3>
+
+<form action="">
+  <select id="mySelect" onchange="myFunction()">
+  	<option value="start">Select Month</option>
+    <option value="january">January</option>
+    <option value="february">February</option>
+    <option value="march">March</option>
+    <option value="april">April</option>
+    <option value="may">May</option>
+    <option value="june">June</option>
+    <option value="july">July</option>
+    <option value="august">August</option>
+    <option value="september">September</option>
+    <option value="october">October</option>
+    <option value="november">November</option>
+    <option value="december">December</option>
+  </select>
+  <br><br>
+</form>
+	
+<div id="container1" class="month">
+	<h2 id="january">01 JANUARY</h2>
+		<ul style="list-style-type:none">
+  			<li><strong>1st </strong> Polar Bear Plunge Day</li>
+  			<li><strong>2nd </strong> Buffet Day</li>
+  			<li><strong>3rd </strong> Fruitcake Toss Day</li>
+  			<li><strong>4th </strong> Trivia Day</li>
+  			<li><strong>5th </strong> Bird Day</li>
+  			<li><strong>6th </strong> Bean Day</li>
+  			<li><strong>7th </strong> Old Rock Day</li>
+  			<li><strong>8th </strong> Earth's Rotation Day</li>
+  			<li><strong>9th </strong> Static Electricity Day</li>
+  			<li><strong>10th </strong> Word Nerd Day</li>
+  			<li><strong>11th </strong> Clean Off Your Desk Day</li>
+  			<li><strong>12th </strong> Learn Your Name in Morse Code Day</li>
+  			<li><strong>13th </strong> Marzipan Day</li>
+  			<li><strong>14th </strong> Organize Your Home Day</li>
+  			<li><strong>15th </strong> Strawberry Ice Cream Day</li>
+  			<li><strong>16th </strong> Nothing Day</li>
+  			<li><strong>17th </strong> Kid Inventors' Day</li>
+  			<li><strong>18th </strong> Take a Powernap Day</li>
+  			<li><strong>19th </strong> Mojito Day</li>
+  			<li><strong>20th </strong> Ditch New Year's Resolution Day</li>
+  			<li><strong>21st </strong> Penguin Awareness Day</li>
+  			<li><strong>22nd </strong> Soup Swap Day</li>
+  			<li><strong>23rd </strong> Squirrel Appreciation Day</li>
+  			<li><strong>24th </strong> Hot Sauce Day</li>
+  			<li><strong>25th </strong> Handwriting Day</li>
+  			<li><strong>26th </strong> Compliment Day</li>
+  			<li><strong>27th </strong> Opposite Day</li>
+  			<li><strong>28th </strong> Chocolate Cake Day</li>
+  			<li><strong>29th </strong> Data Privacy Day</li>
+  			<li><strong>30th </strong> Puzzle Day</li>
+  			<li><strong>31st </strong> Croissant Day</li>
+		</ul> 
+</div>
+
+<div id="container2" class="month">
+	<h2 id="february">02 FEBRUARY</h2>
+		<ul style="list-style-type:none">
+  			<li><strong>1st </strong> Work Naked Day</li>
+  			<li><strong>2nd </strong> Day of the Crêpe Day</li>
+  			<li><strong>3rd </strong> Play Your Ukulele Day</li>
+  			<li><strong>4th </strong> Carrot Cake Day</li>
+  			<li><strong>5th </strong> Eat Ice Cream for Breakfast Day</li>
+  			<li><strong>6th </strong> Thank Your Mailman Day</li>
+  			<li><strong>7th </strong> Create a Vacuum Day</li>
+  			<li><strong>8th </strong> Stuffed Mushroom Day</li>
+  			<li><strong>9th </strong> National Weatherperson's Day</li>
+  			<li><strong>10th </strong> Chocolate Fondue Day</li>
+  			<li><strong>11th </strong> Send a Card to a Friend Day</li>
+  			<li><strong>12th </strong> Laugh and Get Rich Day</li>
+  			<li><strong>13th </strong> Toothace Day</li>
+  			<li><strong>14th </strong> Umbrella Day</li>
+  			<li><strong>15th </strong> Make a Friend Day</li>
+  			<li><strong>16th </strong> Don't Cry Over Spilled Milk Day</li>
+  			<li><strong>17th </strong> Clean Out Your Computer Day</li>
+  			<li><strong>18th </strong> Rihanna Day</li>
+  			<li><strong>19th </strong> Veggie Day</li>
+  			<li><strong>20th </strong> Ferris Wheel Day</li>
+  			<li><strong>21st </strong> Library Lovers Day</li>
+  			<li><strong>22nd </strong> Random Act of Kindness Day</li>
+  			<li><strong>23rd </strong> Chocolate Mint Day</li>
+  			<li><strong>24th </strong> Single Tasking Day</li>
+  			<li><strong>25th </strong> Be Humble Day</li>
+  			<li><strong>26th </strong> Dog Biscuit Day</li>
+  			<li><strong>27th </strong> World Sword Swallowers Day</li>
+  			<li><strong>28th </strong> Tell a Fairytale Day</li>
+		</ul> 
+</div>
+
+<div id="container3" class="month">
+	<h2 id="march">03 MARCH</h2>
+		<ul style="list-style-type:none">
+  			<li><strong>1st </strong> World Compliment Day</li>
+  			<li><strong>2nd </strong> Plan a Solo Vacation Day</li>
+  			<li><strong>3rd </strong> Old Stuff Day</li>
+  			<li><strong>4th </strong> Do Something New Day</li>
+  			<li><strong>5th </strong> Learn What Your Name Means Day</li>
+  			<li><strong>6th </strong> Dentist's Day</li>
+  			<li><strong>7th </strong> Oatmeal Nut Waffle Day</li>
+  			<li><strong>8th </strong> Alfred Hitchcock Day</li>
+  			<li><strong>9th </strong> Napping Day</li>
+  			<li><strong>10th </strong> Jewel Day</li>
+  			<li><strong>11th </strong> Pi Day</li>
+  			<li><strong>12th </strong> Everything You Think is Wrong Day</li>
+  			<li><strong>13th </strong> Absolutely Incredible Kid Day</li>
+  			<li><strong>14th </strong> Submarine Day</li>
+  			<li><strong>15th </strong> Awkward Moments Day</li>
+  			<li><strong>16th </strong> Let's Laugh Day</li>
+  			<li><strong>17th </strong> World Storytelling Day</li>
+  			<li><strong>18th </strong> Cinnamon Bun Day</li>
+  			<li><strong>19th </strong> White Rose Day</li>
+  			<li><strong>20th </strong> Proposal Day</li>
+  			<li><strong>21st </strong> Common Courtesy Day</li>
+  			<li><strong>22nd </strong> International Goof Off Day</li>
+  			<li><strong>23rd </strong> OK Day</li>
+  			<li><strong>24th </strong> Puppy Day</li>
+  			<li><strong>25th </strong> Chocolate Covered Raisins Day</li>
+  			<li><strong>26th </strong> Waffle Day</li>
+  			<li><strong>27th </strong> Tolkien Reading Day</li>
+  			<li><strong>28th </strong> Spanish Paella Day</li>
+  			<li><strong>29th </strong> Something on a Stick Day</li>
+  			<li><strong>30th </strong> Smoke and Mirrors Day</li>
+  			<li><strong>31st </strong> Take a Walk in the Park Day</li>
+		</ul> 
+</div>
+
+<div id="container4" class="month">
+	<h2 id="april">04 APRIL</h2>
+		<ul style="list-style-type:none">
+  			<li><strong>1st </strong> Fun at Work Day</li>
+  			<li><strong>2nd </strong> World Party Day</li>
+  			<li><strong>3rd </strong> Tell a Lie Day</li>
+  			<li><strong>4th </strong> Read a Road Map Day</li>
+  			<li><strong>5th </strong> First Contact Day</li>
+  			<li><strong>6th </strong> Walk to Work Day</li>
+  			<li><strong>7th </strong> Siblings Day</li>
+  			<li><strong>8th </strong> Be Kind to Lawyers Day</li>
+  			<li><strong>9th </strong> Grilled Cheese Day</li>
+  			<li><strong>10th </strong> Scrabble Day</li>
+  			<li><strong>11th </strong> International Moment of Laughter Day</li>
+  			<li><strong>12th </strong> Reach as High as You Can Day</li>
+  			<li><strong>13th </strong> Look Up the Sky Day</li>
+  			<li><strong>14th </strong> Eggs Benedict Day</li>
+  			<li><strong>15th </strong> Wear Pajamas to Work Day</li>
+  			<li><strong>16th </strong> Haiku Poetry Day</li>
+  			<li><strong>17th </strong> Haiku Poetry Day</li>
+  			<li><strong>18th </strong> Pink Pigeon Day</li>
+  			<li><strong>19th </strong> Sticky Cactus Day</li>
+  			<li><strong>20th </strong> Look Alike Day</li>
+  			<li><strong>21st </strong> Record Store Day</li>
+  			<li><strong>22nd </strong> Jelly Bean Day</li>
+  			<li><strong>23rd </strong> Take a Chance Day</li>
+  			<li><strong>24th </strong> Impossible Astronaut Day</li>
+  			<li><strong>25th </strong> Lover's Day</li>
+  			<li><strong>26th </strong> DNA Day</li>
+  			<li><strong>27th </strong> Pretzel Day</li>
+  			<li><strong>28th </strong> Richter Scale Day</li>
+  			<li><strong>29th </strong> Poem in Your Pocket Day</li>
+  			<li><strong>30th </strong> Take Your Daughter to Work Day</li>
+  			<li><strong>31st </strong> Astronomy Day</li>
+		</ul> 
+</div>
+
+<div id="container5" class="month">
+	<h2 id="may">05 MAY</h2>
+		<ul style="list-style-type:none">
+  			<li><strong>1st </strong> Batman Day</li>
+  			<li><strong>2nd </strong> Star Wars Day</li>
+  			<li><strong>3rd </strong> No Pants Day</li>
+  			<li><strong>4th </strong> Space Day</li>
+  			<li><strong>5th </strong> Herb Day</li>
+  			<li><strong>6th </strong> Free Comic Book Day</li>
+  			<li><strong>7th </strong> Beverage Day</li>
+  			<li><strong>8th </strong> Lost Sock Memorial Day</li>
+  			<li><strong>9th </strong> National School Nurse Day</li>
+  			<li><strong>10th </strong> Clean Up Your Room Day</li>
+  			<li><strong>11th </strong> Twilight Zone Day</li>
+  			<li><strong>12th </strong> Eat What You Want Day</li>
+  			<li><strong>13th </strong> Limerick Day</li>
+  			<li><strong>14th </strong> Frog Jumping Day</li>
+  			<li><strong>15th </strong> Dance Like a Chicken Day</li>
+  			<li><strong>16th </strong> Chocolate Chip Day</li>
+  			<li><strong>17th </strong> No Dirty Dishes Day</li>
+  			<li><strong>18th </strong> Salty Caramel Latte Day</li>
+  			<li><strong>19th </strong> Peanut Butter Jelly Day</li>
+  			<li><strong>20th </strong> Pizza Party Day</li>
+  			<li><strong>21st </strong> Talk Like Yoda Day Day</li>
+  			<li><strong>22nd </strong> Buy a Musical Instrument Day</li>
+  			<li><strong>23rd </strong> Scavenger Hunt Day</li>
+  			<li><strong>24th </strong> Sing Out Day</li>
+  			<li><strong>25th </strong> Towel Day</li>
+  			<li><strong>26th </strong> World Lindy Hop Day</li>
+  			<li><strong>27th </strong> Sun Screen Day</li>
+  			<li><strong>28th </strong> Hamburger Day</li>
+  			<li><strong>29th </strong> Put a Pillow in Your Fridge Day</li>
+  			<li><strong>30th </strong> My Bucket's Got a Hole Day</li>
+  			<li><strong>31st </strong> Macaroon Day</li>
+		</ul> 
+</div>
+
+<div id="container6" class="month">
+	<h2 id="june">06 JUNE</h2>
+		<ul style="list-style-type:none">
+  			<li><strong>1st </strong> Say Something Nice Day</li>
+  			<li><strong>2nd </strong> Leave the Office Early Day</li>
+  			<li><strong>3rd </strong> National Doughnut Day</li>
+  			<li><strong>4th </strong> Repeat Day</li>
+  			<li><strong>5th </strong> Hug Your Cat Day</li>
+  			<li><strong>6th </strong> Drive-In Movie Day</li>
+  			<li><strong>7th </strong> Best Friends Day</li>
+  			<li><strong>8th </strong> Donald Duck Day</li>
+  			<li><strong>9th </strong> Iced Tea Day</li>
+  			<li><strong>10th </strong> Corn on the Cub Day</li>
+  			<li><strong>11th </strong> Red Rose Day</li>
+  			<li><strong>12th </strong> Sewing Machine Day</li>
+  			<li><strong>13th </strong> Bourbon Day</li>
+  			<li><strong>14th </strong> Nature Photography Day</li>
+  			<li><strong>15th </strong> World Juggling Day</li>
+  			<li><strong>16th </strong> Eat Your Vegetables Day</li>
+  			<li><strong>17th </strong> International Picnic Day</li>
+  			<li><strong>18th </strong> Britney Spears Day</li>
+  			<li><strong>19th </strong> Polka Dots Day</li>
+  			<li><strong>20th </strong> Sauntering Day</li>
+  			<li><strong>21st </strong> Daylight Appreciation Day</li>
+  			<li><strong>22nd </strong> Onion Ring Day</li>
+  			<li><strong>23rd </strong> Take Your Dog to Work Day</li>
+  			<li><strong>24th </strong> Typewriter Day</li>
+  			<li><strong>25th </strong> Swim a Lap Day</li>
+  			<li><strong>26th </strong> Chocolate Pudding Day</li>
+  			<li><strong>27th </strong> Helen Keller Day</li>
+  			<li><strong>28th </strong> Camera Day</li>
+  			<li><strong>29th </strong> Meteor Watch Day</li>
+  			<li><strong>30th </strong> Butterfly Day</li>
+		</ul> 
+</div>
+
+<div id="container7" class="month">
+	<h2 id="july">07 JULY</h2>
+		<ul style="list-style-type:none">
+  			<li><strong>1st </strong> International Joke Day</li>
+  			<li><strong>2nd </strong> I Forgot Day</li>
+  			<li><strong>3rd </strong> World UFO Day</li>
+  			<li><strong>4th </strong> Compliment Your Mirror Day</li>
+  			<li><strong>5th </strong> International Plastic Bag Free Day</li>
+  			<li><strong>6th </strong> Sidewalk Egg Frying Day</li>
+  			<li><strong>7th </strong> Workaholics Day</li>
+  			<li><strong>8th </strong> World Kissing Day</li>
+  			<li><strong>9th </strong> Tell the Truth Day</li>
+  			<li><strong>10th </strong> Video Games Day</li>
+  			<li><strong>11th </strong> Sugar Cookie Day</li>
+  			<li><strong>12th </strong> Teddy Bears' Picnic Day</li>
+  			<li><strong>13th </strong> Cheer Up the Lonely Day</li>
+  			<li><strong>14th </strong> Simplicity Day</li>
+  			<li><strong>15th </strong> Embrace Your Geekness Day</li>
+  			<li><strong>16th </strong> Gummi Worm Day</li>
+  			<li><strong>17th </strong> Corn Fritters Day</li>
+  			<li><strong>18th </strong> Fabolous Unicorn Day</li>
+  			<li><strong>19th </strong> Garlic Cheese Fries Day</li>
+  			<li><strong>20th </strong> Ice Cream Day</li>
+  			<li><strong>21st </strong> Yellow Pig Day</li>
+  			<li><strong>22nd </strong> Caviar Day</li>
+  			<li><strong>23rd </strong> Stick Out Your Tongue Day</li>
+  			<li><strong>24th </strong> Space Exploration Day</li>
+  			<li><strong>25th </strong> Junk Food Day</li>
+  			<li><strong>26th </strong> Pi Approximation Day</li>
+  			<li><strong>27th </strong> Cousins Day</li>
+  			<li><strong>28th </strong> Uncle and Aunt Day</li>
+  			<li><strong>29th </strong> Lasagna Day</li>
+  			<li><strong>30th </strong> National Cheesecake Day</li>
+  			<li><strong>31st </strong> Uncommon Musical Instrument Day</li>
+		</ul> 
+</div>
+
+<div id="container8" class="month">
+	<h2 id="august">08 AUGUST</h2>
+		<ul style="list-style-type:none">
+  			<li><strong>1st </strong> Girlfriend's Day</li>
+  			<li><strong>2nd </strong> Ice Cream Sandwich Day</li>
+  			<li><strong>3rd </strong> Watermelon Day</li>
+  			<li><strong>4th </strong> Single's Day</li>
+  			<li><strong>5th </strong> International Beer Day</li>
+  			<li><strong>6th </strong> Work Like a Dog Day</li>
+  			<li><strong>7th </strong> Sisters' Day</li>
+  			<li><strong>8th </strong> Fresh Breath Day</li>
+  			<li><strong>9th </strong> Lighthouse Day</li>
+  			<li><strong>10th </strong> Happiness Happens Day</li>
+  			<li><strong>11th </strong> Book Lovers Day</li>
+  			<li><strong>12th </strong> Lazy Day</li>
+  			<li><strong>13th </strong> Son and Daughter Day</li>
+  			<li><strong>14th </strong> Middle Child Day</li>
+  			<li><strong>15th </strong> Left-Handers Day</li>
+  			<li><strong>16th </strong> Relaxation Day</li>
+  			<li><strong>17th </strong> Pussypower Day</li>
+			<li><strong>18th </strong> Golden Palm Tree Day</li>
+  			<li><strong>19th </strong> Tell a Joke Day</li>
+  			<li><strong>20th </strong> Thrift Shop Day</li>
+  			<li><strong>21st </strong> Mail Order Catalog Day</li>
+  			<li><strong>22nd </strong> World Photo Day</li>
+  			<li><strong>23rd </strong> Chocolate Pecan Pie Day</li>
+  			<li><strong>24th </strong> Be An Angel Day</li>
+  			<li><strong>25th </strong> Ride Like the Wind Day</li>
+  			<li><strong>26th </strong> Kiss and Make Up Day</li>
+  			<li><strong>27th </strong> Dog Appreciation Day</li>
+  			<li><strong>28th </strong> Bow Tie Day</li>
+  			<li><strong>29th </strong> Hazelnut Day</li>
+  			<li><strong>30th </strong> National Rhyming Day</li>
+  			<li><strong>31st </strong> Blue Sky Day</li>
+		</ul> 
+</div>
+
+<div id="container9" class="month">
+	<h2 id="september">09 SEPTEMBER</h2>
+		<ul style="list-style-type:none">
+  			<li><strong>1st </strong> No Rhyme or Reason Day</li>
+  			<li><strong>2nd </strong> Skyscraper Day</li>
+  			<li><strong>3rd </strong> Eat an Extra Dessert Day</li>
+  			<li><strong>4th </strong> Be Late for Something Day</li>
+  			<li><strong>5th </strong> Cheese Pizza Day</li>
+  			<li><strong>6th </strong> Fight Procrastination Day</li>
+  			<li><strong>7th </strong> Read a Book Day</li>
+  			<li><strong>8th </strong> Salami Day</li>
+  			<li><strong>9th </strong> Pardon Day</li>
+  			<li><strong>10th </strong> Teddy Bear Day</li>
+  			<li><strong>11th </strong> Swap Ideas Day</li>
+  			<li><strong>12th </strong> Make Your Bed Day</li>
+  			<li><strong>13th </strong> Chocolate Milkshake Day</li>
+  			<li><strong>14th </strong> Positive Thinking Day</li>
+  			<li><strong>15th </strong> Roald Dahl Day</li>
+  			<li><strong>16th </strong> Hug Your Hound Day</li>
+  			<li><strong>17th </strong> Make a Hat Day</li>
+  			<li><strong>18th </strong> Whiskey Sour Day</li>
+  			<li><strong>19th </strong> Hawaii Day</li>
+  			<li><strong>20th </strong> Collect Rocks Day</li>
+  			<li><strong>21st </strong> Guacamole Day</li>
+  			<li><strong>22nd </strong> International Country Music Day</li>
+  			<li><strong>23rd </strong> Rice Krispie Treat Day</li>
+  			<li><strong>24th </strong> Miniature Golf Day</li>
+  			<li><strong>25th </strong> Hobbit Day</li>
+  			<li><strong>26th </strong> Comic Book Day</li>
+  			<li><strong>27th </strong> Love Note Day</li>
+  			<li><strong>28th </strong> Crush a Can Day</li>
+  			<li><strong>29th </strong> Ask a Stupid Question Day</li>
+  			<li><strong>30th </strong> Good Neighbor Day</li>
+  			<li><strong>31st </strong> Hot Cider Day</li>
+		</ul> 
+</div>
+
+<div id="container10" class="month">
+	<h2 id="october">10 OCTOBER</h2>
+		<ul style="list-style-type:none">
+  			<li><strong>1st </strong> International Coffee Day</li>
+  			<li><strong>2nd </strong> Balloons Around the World Day</li>
+  			<li><strong>3rd </strong> Taco Day</li>
+  			<li><strong>4th </strong> World Smile Day</li>
+  			<li><strong>5th </strong> Mad Hatter Day</li>
+  			<li><strong>6th </strong> Card Making Day</li>
+  			<li><strong>7th </strong> Frappé Day</li>
+  			<li><strong>8th </strong> Curious Events Day</li>
+  			<li><strong>9th </strong> Handbag Day</li>
+  			<li><strong>10th </strong> It's My Party Day</li>
+  			<li><strong>11th </strong> Old Farmers Day</li>
+  			<li><strong>12th </strong> International Skeptics Day</li>
+  			<li><strong>13th </strong> Dictionary Day</li>
+  			<li><strong>14th </strong> Clean Out Your Virtual Desktop Day</li>
+  			<li><strong>15th </strong> Wear Something Gaudy Day</li>
+  			<li><strong>16th </strong> Chocolate Cupcake Day</li>
+  			<li><strong>17th </strong> International Sloth Day</li>
+			<li><strong>18th </strong> Moomin Day</li>
+  			<li><strong>19th </strong> Giraffe Day</li>
+  			<li><strong>20th </strong> Sweetest Day</li>
+  			<li><strong>21st </strong> Count Your Buttons Day</li>
+  			<li><strong>22nd </strong> Caps Lock Day</li>
+  			<li><strong>23rd </strong> Mole Day</li>
+  			<li><strong>24th </strong> Bologna Day</li>
+  			<li><strong>25th </strong> Howl at the Moon Day</li>
+  			<li><strong>26th </strong> American Beer Day</li>
+  			<li><strong>27th </strong> International Animation Day</li>
+  			<li><strong>28th </strong> Internet Day</li>
+  			<li><strong>29th </strong> Candy Corn Day</li>
+  			<li><strong>30th </strong> Magic Day</li>
+  			<li><strong>31st </strong> Apple Pie Day</li>
+		</ul> 
+</div>
+
+<div id="container11" class="month">
+	<h2 id="november">11 NOVEMBER</h2>
+		<ul style="list-style-type:none">
+  			<li><strong>1st </strong> International Coffee Day</li>
+  			<li><strong>2nd </strong> Balloons Around the World Day</li>
+  			<li><strong>3rd </strong> Taco Day</li>
+  			<li><strong>4th </strong> World Smile Day</li>
+  			<li><strong>5th </strong> Mad Hatter Day</li>
+  			<li><strong>6th </strong> Card Making Day</li>
+  			<li><strong>7th </strong> Frappé Day</li>
+  			<li><strong>8th </strong> Curious Events Day</li>
+  			<li><strong>9th </strong> Handbag Day</li>
+  			<li><strong>10th </strong> It's My Party Day</li>
+  			<li><strong>11th </strong> Old Farmers Day</li>
+  			<li><strong>12th </strong> International Skeptics Day</li>
+  			<li><strong>13th </strong> Dictionary Day</li>
+  			<li><strong>14th </strong> Clean Out Your Virtual Desktop Day</li>
+  			<li><strong>15th </strong> Wear Something Gaudy Day</li>
+  			<li><strong>16th </strong> Chocolate Cupcake Day</li>
+  			<li><strong>17th </strong> International Sloth Day</li>
+  			<li><strong>18th </strong> Neon Color Day</li>
+  			<li><strong>19th </strong> Karaoke Day</li>
+  			<li><strong>20th </strong> Sweetest Day</li>
+  			<li><strong>21st </strong> Count Your Buttons Day</li>
+  			<li><strong>22nd </strong> Caps Lock Day</li>
+  			<li><strong>23rd </strong> Mole Day</li>
+  			<li><strong>24th </strong> Bologna Day</li>
+  			<li><strong>25th </strong> Howl at the Moon Day</li>
+  			<li><strong>26th </strong> American Beer Day</li>
+  			<li><strong>27th </strong> International Animation Day</li>
+  			<li><strong>28th </strong> Internet Day</li>
+  			<li><strong>29th </strong> Candy Corn Day</li>
+  			<li><strong>30th </strong> Magic Day</li>
+		</ul> 
+</div>
+
+<div id="container12" class="month">
+	<h2 id="december">12 DECEMBER</h2>
+		<ul style="list-style-type:none">
+  			<li><strong>1st </strong> International Coffee Day</li>
+  			<li><strong>2nd </strong> Balloons Around the World Day</li>
+  			<li><strong>3rd </strong> Taco Day</li>
+  			<li><strong>4th </strong> World Smile Day</li>
+  			<li><strong>5th </strong> Mad Hatter Day</li>
+  			<li><strong>6th </strong> Card Making Day</li>
+  			<li><strong>7th </strong> Frappé Day</li>
+  			<li><strong>8th </strong> Curious Events Day</li>
+  			<li><strong>9th </strong> Handbag Day</li>
+  			<li><strong>10th </strong> It's My Party Day</li>
+  			<li><strong>11th </strong> Old Farmers Day</li>
+  			<li><strong>12th </strong> International Skeptics Day</li>
+  			<li><strong>13th </strong> Dictionary Day</li>
+  			<li><strong>14th </strong> Clean Out Your Virtual Desktop Day</li>
+  			<li><strong>15th </strong> Wear Something Gaudy Day</li>
+  			<li><strong>16th </strong> Chocolate Cupcake Day</li>
+  			<li><strong>17th </strong> International Sloth Day</li>
+  			<li><strong>18th </strong> Black Coffee Day</li>
+  			<li><strong>19th </strong> Pumpkin Pie Day</li>
+  			<li><strong>20th </strong> Sweetest Day</li>
+  			<li><strong>21st </strong> Count Your Buttons Day</li>
+  			<li><strong>22nd </strong> Caps Lock Day</li>
+  			<li><strong>23rd </strong> Mole Day</li>
+  			<li><strong>24th </strong> Bologna Day</li>
+  			<li><strong>25th </strong> Howl at the Moon Day</li>
+  			<li><strong>26th </strong> American Beer Day</li>
+  			<li><strong>27th </strong> International Animation Day</li>
+  			<li><strong>28th </strong> Internet Day</li>
+  			<li><strong>29th </strong> Candy Corn Day</li>
+  			<li><strong>30th </strong> Eating Christmas Leftovers Day</li>
+  			<li><strong>31st </strong> Cozy Up With a Blanket Day</li>
+		</ul> 
+</div>
+
+<script>
+	function myFunction() {
+	$(".month").hide();
+    var x = document.getElementById("mySelect");
+    var i = x.selectedIndex;
+    console.log(i);
+    if (i != 0) {
+    	document.getElementById("container"+i).style.display = "block";
+    }
+	}
+
+	var d = new Date();
+	document.getElementById("date").innerHTML = d;
+
+	function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+	}
+	function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+	}
+		
+</script>
+
+</body>
+</html>
